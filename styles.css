@@ -78,34 +78,30 @@ img {
   margin: 0 auto;
 }
 
-/* Gallery photos */
-.gallery-grid {
+.gallery {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
   width: 100%;
 }
 
-.gallery-grid img,
 .gallery img {
   width: 100%;
-  height: 320px;
+  height: 260px;
   object-fit: cover;
   object-position: center;
   border-radius: 14px;
+  display: block;
 }
 
-/* Mobile phone sizing */
 @media (max-width: 600px) {
-  .hero-image,
-  .hero-image img,
-  .profile-photo,
-  .profile-photo img {
-    height: 420px;
+  .gallery {
+    grid-template-columns: 1fr;
   }
 
-  .gallery-grid img,
   .gallery img {
-    height: 280px;
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
   }
 }
